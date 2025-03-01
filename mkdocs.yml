@@ -1,0 +1,125 @@
+# Name displayed at the top of each page
+site_name: "PyConfig"
+# Source dir md for mkdocs
+docs_dir: docs
+# branch default to master
+edit_uri: edit/main/docs/
+
+# Setup the theme (template, colors, ...)
+theme:
+  name: "material" # nice!
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to system preference
+
+  # logo: material/developper-guide
+  # favicon:
+  # Icons
+  icon:
+  # logo, menu, alternate, search, share, close, top, edit, view, repo, admonition, tag, previous, next
+    # edit: material/pencil 
+    view: material/eye
+
+  features:
+    - navigation.tabs # tabs at the top
+    - navigation.tabs.sticky # navigation stick to the side when scrolling
+    # - navigation.sections
+    # - navigation.expand
+    # - navigation.indexes # a section can hold a md itself
+    - toc.follow # table of content
+    # - toc.integrate # render within the nav
+    - navigation.top # back-to-top
+    - navigation.instant
+    # - header.autohide
+    - navigation.footer
+    # - content.action.edit
+    - content.action.view
+
+# Add functionnalities
+plugins:
+- search
+- mkdocstrings
+
+# Define the navigation bar
+nav:
+  - Home: index.md
+  - Python Setup:
+    - uv:
+      - Introduction: python-setup/uv/intro.md
+      - Python Installation: python-setup/uv/python-install.md
+      - Project Setup: python-setup/uv/project-setup.md
+    - Ruff:
+      - Introduction: python-setup/ruff/intro.md
+      - Linter: python-setup/ruff/linter.md
+      - Format: python-setup/ruff/format.md
+    - Code Versioning: python-setup/git.md
+    - Pypi: python-setup/pypi.md
+  - Types and Docstrings:
+    - Types: types-docs/types.md
+    - Logger: types-docs/logger.md
+    - Docstrings: types-docs/docstrings.md
+  - Big Data:
+    - Numpy: big-data/numpy.md
+    - Dask: big-data/dask.md
+  - CLI:
+    - Typer: cli/typer.md
+  - Share Code:
+    - Material for Mkdocs: share-code/mkdocs-material.md
+    - Docstrings extraction: share-code/mkdocstrings.md
+    - Github Pages: share-code/gh-pages.md
+  - about.md
+
+# Add the link to the repo at the top right
+repo_name: PyConfig
+repo_url: https://github.com/LeoLetellier/PyConfig
+
+# Add copyright mention at bottom left
+copyright: Copyright &copy; 2025 - Leo Letellier
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+#   consent:
+#     title: Cookie consent
+#     description: >- 
+#       We use cookies to recognize your repeated visits and preferences, as well
+#       as to measure the effectiveness of our documentation and whether users
+#       find what they're searching for. With your consent, you're helping us to
+#       make our documentation better.
+#   # Browse for different versions
+#   version:
+#     provider: mike
+#     default: stable
+#     # alias: true
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/LeoLetellier
