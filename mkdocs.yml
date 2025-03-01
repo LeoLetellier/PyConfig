@@ -43,7 +43,7 @@ theme:
 
   features:
     - navigation.tabs # tabs at the top
-    - navigation.tabs.sticky # navigation stick to the side when scrolling
+    # - navigation.tabs.sticky # navigation stick to the top when scrolling down
     # - navigation.sections
     # - navigation.expand
     # - navigation.indexes # a section can hold a md itself
@@ -61,35 +61,6 @@ plugins:
 - search
 - mkdocstrings
 
-# Define the navigation bar
-nav:
-  - Home: index.md
-  - Python Setup:
-    - uv:
-      - Introduction: python-setup/uv/intro.md
-      - Python Installation: python-setup/uv/python-install.md
-      - Project Setup: python-setup/uv/project-setup.md
-    - Ruff:
-      - Introduction: python-setup/ruff/intro.md
-      - Linter: python-setup/ruff/linter.md
-      - Format: python-setup/ruff/format.md
-    - Code Versioning: python-setup/git.md
-    - Pypi: python-setup/pypi.md
-  - Types and Docstrings:
-    - Types: types-docs/types.md
-    - Logger: types-docs/logger.md
-    - Docstrings: types-docs/docstrings.md
-  - Big Data:
-    - Numpy: big-data/numpy.md
-    - Dask: big-data/dask.md
-  - CLI:
-    - Typer: cli/typer.md
-  - Share Code:
-    - Material for Mkdocs: share-code/mkdocs-material.md
-    - Docstrings extraction: share-code/mkdocstrings.md
-    - Github Pages: share-code/gh-pages.md
-  - about.md
-
 # Add the link to the repo at the top right
 repo_name: PyConfig
 repo_url: https://github.com/LeoLetellier/PyConfig
@@ -98,12 +69,12 @@ repo_url: https://github.com/LeoLetellier/PyConfig
 copyright: Copyright &copy; 2025 - Leo Letellier
 
 markdown_extensions:
-  - attr_list
+  - attr_list # button
   - admonition
-  - md_in_html
+  - md_in_html # layout
   - pymdownx.details
   - pymdownx.superfences
-  - pymdownx.emoji:
+  - pymdownx.emoji: # emojis and icons
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
@@ -123,3 +94,34 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/LeoLetellier
+
+# Define the navigation bar
+nav:
+  - Home: index.md
+  - Python Setup:
+    - uv:
+      - Introduction: python-setup/uv/intro.md
+      - Python Installation: python-setup/uv/python-install.md
+      - Project Setup: python-setup/uv/project-setup.md
+    - Ruff:
+      - Introduction: python-setup/ruff/intro.md
+      - Linter: python-setup/ruff/linter.md
+      - Format: python-setup/ruff/format.md
+    - Code Versioning: python-setup/git.md
+    - Pyproject: python-setup/pyproject.md
+  - Code Quality:
+    - Types: code-quality/types.md
+    - Logger: code-quality/logger.md
+  - Big Data:
+    - Numpy: big-data/numpy.md
+    - Dask: big-data/dask.md
+  - Documentation:
+    - Docstrings: documentation/docstrings.md
+  - CLI:
+    - Typer: cli/typer.md
+  - Share:
+    - Material for Mkdocs: share-code/mkdocs-material.md
+    - Docstrings extraction: share-code/mkdocstrings.md
+    - Github Pages: share-code/gh-pages.md
+    - Pypi: share-code/pypi.md
+  - about.md
