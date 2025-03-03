@@ -15,7 +15,7 @@ More than python code practice; mastering the python environment, code formattin
 
     Make easily reproducible and self-contained code, don't ever fight with your dependencies and your broken installation
 
-    [:octicons-arrow-right-24: Master your Installation](python-setup/uv/intro.md)
+    [:octicons-arrow-right-24: Master your Installation](python-setup/pyproject.md)
 
 -   :material-quality-high:{ .lg .middle } __Code Quality__
     
@@ -55,7 +55,7 @@ More than python code practice; mastering the python environment, code formattin
 
     Because sharing is caring (is it?), cook a nice integrated documentation for your team and your community
 
-    [:octicons-arrow-right-24: Hit share](share-code/mkdocs-material.md)
+    [:octicons-arrow-right-24: Hit share](share-code/gh-pages.md)
 
 </div>
 ____________________________

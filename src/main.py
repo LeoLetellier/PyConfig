@@ -1,13 +1,22 @@
-def add(a: float, b: float) -> float:
-    """
-    Output the addition of two numbers
+"""Main script for test purposes
+"""
 
-    Args:
-        - a (float): first number
-        - b (float): second number
+def add(a: float, b: float) -> float:
+    """Output the addition of two numbers
+
+    Arguments:
+        a : first number
+        b : second number
 
     Returns:
-        - result (float): the result of the addition
+        result : the result of the addition
+    
+    Example:
+
+        ```python
+        result = add(5, 5)
+        assert result == 10
+        ```
     """
     result = a + b  # noqa: F841
     return a + b

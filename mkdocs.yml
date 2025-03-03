@@ -55,6 +55,8 @@ theme:
     - navigation.footer
     # - content.action.edit
     - content.action.view
+    - content.code.copy
+    - content.tabs.link
 
 # Add functionnalities
 plugins:
@@ -77,6 +79,8 @@ markdown_extensions:
   - pymdownx.emoji: # emojis and icons
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
 
 extra:
 #   consent:
@@ -99,6 +103,8 @@ extra:
 nav:
   - Home: index.md
   - Python Setup:
+    - Pyproject: python-setup/pyproject.md
+    - Code Versioning: python-setup/git.md
     - uv:
       - Introduction: python-setup/uv/intro.md
       - Python Installation: python-setup/uv/python-install.md
@@ -107,8 +113,6 @@ nav:
       - Introduction: python-setup/ruff/intro.md
       - Linter: python-setup/ruff/linter.md
       - Format: python-setup/ruff/format.md
-    - Code Versioning: python-setup/git.md
-    - Pyproject: python-setup/pyproject.md
   - Code Quality:
     - Types: code-quality/types.md
     - Logger: code-quality/logger.md
@@ -117,11 +121,11 @@ nav:
     - Dask: big-data/dask.md
   - Documentation:
     - Docstrings: documentation/docstrings.md
+    - Sphinx: documentation/sphinx.md
+    - Mkdocs: documentation/mkdocs.md
   - CLI:
     - Typer: cli/typer.md
   - Share:
-    - Material for Mkdocs: share-code/mkdocs-material.md
-    - Docstrings extraction: share-code/mkdocstrings.md
     - Github Pages: share-code/gh-pages.md
     - Pypi: share-code/pypi.md
   - about.md

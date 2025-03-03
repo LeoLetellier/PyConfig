@@ -1,7 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "pyconfig"
 version = "0.1.0"
-description = "Add your description here"
+authors = [ {name = "Leo Letellier"} ]
+# maintainers
+description = "A modern python configuration for well maintained projects"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+keywords = ["configuration", "python", "documentation", "installation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3"
+]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    
+]
+
+[project.urls]
+Homepage = "https://leoletellier.github.io/PyConfig/"
+Documentation = "https://leoletellier.github.io/PyConfig/documentation/docstrings/"
+Repository = "https://github.com/LeoLetellier/PyConfig"
+Issues = "https://github.com/LeoLetellier/PyConfig/issues"
+Changelog = "https://leoletellier.github.io/PyConfig/share-code/mkdocs-material/"
+# Download
